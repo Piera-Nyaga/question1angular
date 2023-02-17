@@ -1,0 +1,31 @@
+<div class="question">
+
+    <div class="section-1">
+        <p>Question 1</p>
+        <h2  *ngIf ="!shqQuiz" (click)="ShowQuestion()">+</h2>
+        <h2  *ngIf ="shqQuiz" (click)="ShowQuestion()">-</h2>
+    </div>
+    
+
+<div class="shoUp" *ngIf="shqQuiz" >
+
+
+    <div class="question-content" >
+        <p>Please complete the tasks outlined in the instructions video. Why did you choose the approach you took? Which problems <br>
+        did you encounter?</p>
+    </div>
+
+    <div class="answer"  *ngIf="shqQuiz">
+        <p>Answer</p>
+        <h2 class="answer-minus" *ngIf ="!shAnsw" (click)="showAnsw()">+</h2>
+        <h2 class="answer-minus" *ngIf ="shAnsw" (click)="showAnsw()">-</h2>
+
+    </div>
+
+    <div class="answer-content"  *ngIf="shAnsw">
+        <p>
+            My solution video shows one approach to complete the tasks outlined in the instruction video.
+        </p>
+    </div>
+</div>
+</div>
